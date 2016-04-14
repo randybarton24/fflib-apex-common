@@ -52,6 +52,19 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 				{
 					Product2 product = new Product2();
 					product.Name = opp.Name + ' : Product : ' + i;
+					product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
+					product.RecurSoft__Billing_Automation__c = 'Auto';
+					product.RecurSoft__Billing_Frequency__c = 'Monthly';
+					product.RecurSoft__Revenue_Schedule_Type__c = 'Repeat Amount for Each Installment';
+					product.RecurSoft__Product_Based_On__c = 'Each';
+					product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
+					product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
+					product.RecurSoft__Taxable__c = true,
+					product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
+					product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
+					product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
+					product.RecurSoft__Rev_Rec_Start__c = 0;
+					product.RecurSoft__Rev_Installments_Period__c = 'Monthly';
 					uow.registerNew(new List<SObject>{product});
 					PricebookEntry pbe = new PricebookEntry();
 					pbe.UnitPrice = 10;
@@ -86,6 +99,19 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			uow.registerDirty(new List<SObject>{opp});
 			Product2 product = new Product2();
 			product.Name = opp.Name + ' : New Product';
+			product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
+			product.RecurSoft__Billing_Automation__c = 'Auto';
+			product.RecurSoft__Billing_Frequency__c = 'Monthly';
+			product.RecurSoft__Revenue_Schedule_Type__c = 'Repeat Amount for Each Installment';
+			product.RecurSoft__Product_Based_On__c = 'Each';
+			product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
+			product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
+			product.RecurSoft__Taxable__c = true,
+			product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
+			product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
+			product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
+			product.RecurSoft__Rev_Rec_Start__c = 0;
+			product.RecurSoft__Rev_Installments_Period__c = 'Monthly';
 			uow.registerNew(new List<SObject>{product});
 			PricebookEntry pbe = new PricebookEntry();
 			pbe.UnitPrice = 10;
@@ -189,6 +215,19 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			{
 				Product2 product = new Product2();
 				product.Name = opp.Name + ' : Product : ' + i;
+				product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
+				product.RecurSoft__Billing_Automation__c = 'Auto';
+				product.RecurSoft__Billing_Frequency__c = 'Monthly';
+				product.RecurSoft__Revenue_Schedule_Type__c = 'Repeat Amount for Each Installment';
+				product.RecurSoft__Product_Based_On__c = 'Each';
+				product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
+				product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
+				product.RecurSoft__Taxable__c = true,
+				product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
+				product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
+				product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
+				product.RecurSoft__Rev_Rec_Start__c = 0;
+				product.RecurSoft__Rev_Installments_Period__c = 'Monthly';
 				uow.registerNew(new List<SObject>{product});
 				PricebookEntry pbe = new PricebookEntry();
 				pbe.UnitPrice = 10;
