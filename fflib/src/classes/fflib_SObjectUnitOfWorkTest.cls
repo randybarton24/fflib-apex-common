@@ -61,7 +61,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 					product.RecurSoft__Product_Based_On__c = 'Each';
 					product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
 					product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
-					product.RecurSoft__Taxable__c = true,
+					product.RecurSoft__Taxable__c = true;
 					product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
 					product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
 					product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
@@ -108,7 +108,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			product.RecurSoft__Product_Based_On__c = 'Each';
 			product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
 			product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
-			product.RecurSoft__Taxable__c = true,
+			product.RecurSoft__Taxable__c = true;
 			product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
 			product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
 			product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
@@ -226,7 +226,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 				product.RecurSoft__Product_Based_On__c = 'Each';
 				product.RecurSoft__Intacct_UOM_dropdown__c = 'Each';
 				product.RecurSoft__Invoicing_Date__c = 'Based on contract signed date';
-				product.RecurSoft__Taxable__c = true,
+				product.RecurSoft__Taxable__c = true;
 				product.RecurSoft__Revenue_Recognition_Method__c = 'Revenue Transaction';
 				product.RecurSoft__Rev_Rec_Template_Name__c = 'Contract Term';
 				product.RecurSoft__Rev_Rec_End_Based_On__c = 'Contract Term End Date';
