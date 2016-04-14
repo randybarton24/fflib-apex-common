@@ -43,11 +43,13 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			fflib_SObjectUnitOfWork uow = new fflib_SObjectUnitOfWork(MY_SOBJECTS);
 			for(Integer o=0; o<10; o++)
 			{
+				Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
+				uow.registerNew(new List<SObject>{acct});
 				Opportunity opp = new Opportunity();
 				opp.Name = 'UoW Test Name ' + o;
 				opp.StageName = 'Open';
 				opp.CloseDate = System.today();
-				uow.registerNew(new List<SObject>{opp});
+				uow.registerNew(opp, Opportunity.AccountId, acct);
 				for(Integer i=0; i<o+1; i++)
 				{
 					Product2 product = new Product2();
@@ -206,11 +208,13 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
 		for(Integer o=0; o<10; o++)
 		{
+			Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
+			uow.registerNew(new List<SObject>{acct});
 			Opportunity opp = new Opportunity();
 			opp.Name = 'UoW Test Name ' + o;
 			opp.StageName = 'Open';
 			opp.CloseDate = System.today();
-			uow.registerNew(new List<SObject>{opp});
+			uow.registerNew(opp, Opportunity.AccountId, acct);
 			for(Integer i=0; i<o+1; i++)
 			{
 				Product2 product = new Product2();
@@ -272,8 +276,10 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork forcing a failure on DML by not setting 'Name' field
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
+		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
+		uow.registerNew(new List<SObject>{acct});
 		Opportunity opp = new Opportunity();
-		uow.registerNew(new List<SObject>{opp});
+		uow.registerNew(opp, Opportunity.AccountId, acct);
 		Boolean didFail = false;
 		System.DmlException caughtEx = null;
 
@@ -310,11 +316,13 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
+		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
+		uow.registerNew(new List<SObject>{acct});
 		Opportunity opp = new Opportunity();
 		opp.Name = 'UoW Test Name 1';
 		opp.StageName = 'Open';
 		opp.CloseDate = System.today();
-		uow.registerNew(new List<SObject>{opp});
+		uow.registerNew(opp, Opportunity.AccountId, acct);
 
 		// register work that will fail during processing
 		FailDoingWork fdw = new FailDoingWork();
