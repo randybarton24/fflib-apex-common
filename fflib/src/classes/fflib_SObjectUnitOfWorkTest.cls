@@ -32,6 +32,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 		new Schema.SObjectType[] { 
 			Product2.SObjectType, 
 			PricebookEntry.SObjectType, 
+			Account.SObjectType,
 			Opportunity.SObjectType, 
 			OpportunityLineItem.SObjectType };
 
