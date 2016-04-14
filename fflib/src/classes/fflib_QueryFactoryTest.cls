@@ -266,6 +266,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -296,6 +298,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -325,6 +329,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -363,6 +369,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -401,6 +409,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -432,6 +442,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -462,6 +474,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
         Task tsk = new Task();
@@ -501,6 +515,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
 		fflib_QueryFactory qf = new fflib_QueryFactory(Contact.SObjectType);
@@ -528,6 +544,8 @@ private class fflib_QueryFactoryTest {
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
 		cont.LastName = 'test';
+		cont.Email = 'fakeemail@fakeemail.com';
+		cont.Phone = '5556667777';
 		cont.AccountId = acct.Id;
 		insert cont;
 		fflib_QueryFactory qf = new fflib_QueryFactory(Contact.SObjectType);
