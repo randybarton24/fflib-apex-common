@@ -48,8 +48,8 @@ private with sharing class fflib_SObjectSelectorTest
 	{
 		// Inserting in reverse order so that we can test the order by of select 
 		List<Account> accountList = new List<Account> {
-			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67),
-			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21) };		
+			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67,Industry='Dental'),
+			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21,Industry='Dental') };		
 		insert accountList;		
 		Set<Id> idSet = new Set<Id>();
 		for(Account item : accountList)
@@ -73,8 +73,8 @@ private with sharing class fflib_SObjectSelectorTest
 	{
 		// Inserting in reverse order so that we can test the order by of select 
 		List<Account> accountList = new List<Account> {
-			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67),
-			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21) };		
+			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67,Industry='Dental'),
+			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21,Industry='Dental') };		
 		insert accountList;		
 		Set<Id> idSet = new Set<Id>();
 		for(Account item : accountList)
@@ -102,8 +102,8 @@ private with sharing class fflib_SObjectSelectorTest
 	static testMethod void testAssertIsAccessible()
 	{
 		List<Account> accountList = new List<Account> {
-			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67),
-			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21) };		
+			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67,Industry='Dental'),
+			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21,Industry='Dental') };		
 		insert accountList;		
 		Set<Id> idSet = new Set<Id>();
 		for(Account item : accountList)
@@ -131,8 +131,8 @@ private with sharing class fflib_SObjectSelectorTest
 	static testMethod void testCRUDOff()
 	{
 		List<Account> accountList = new List<Account> {
-			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67),
-			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21) };		
+			new Account(Name='TestAccount2',AccountNumber='A2',AnnualRevenue=12345.67,Industry='Dental'),
+			new Account(Name='TestAccount1',AccountNumber='A1',AnnualRevenue=76543.21,Industry='Dental') };		
 		insert accountList;		
 		Set<Id> idSet = new Set<Id>();
 		for(Account item : accountList)
