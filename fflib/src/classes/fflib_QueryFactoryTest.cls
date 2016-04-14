@@ -261,6 +261,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueriesWithChildRelationship_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -290,6 +291,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueriesWithChildRelationshipNoAccessibleCheck_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -318,6 +320,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueriesWithChildRelationshipObjCheckIsAccessible_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -355,6 +358,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueriesWithChildRelationshipObj_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -392,6 +396,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueriesWithChildRelationshipNoAccessibleCheck_fail(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -422,6 +427,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueries_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -451,6 +457,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQuerySameRelationshipAgain_success(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -489,6 +496,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueries_invalidChildRelationship(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
@@ -515,6 +523,7 @@ private class fflib_QueryFactoryTest {
 	static void addChildQueries_invalidChildRelationshipTooDeep(){
 		Account acct = new Account();
 		acct.Name = 'testchildqueriesacct';
+		acct.Industry = 'Dental';
 		insert acct;
 		Contact cont = new Contact();
 		cont.FirstName = 'test';
