@@ -32,7 +32,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 		new Schema.SObjectType[] { 
 			Product2.SObjectType, 
 			PricebookEntry.SObjectType,
-			RecurSoft__Intacct_Entity_c.SObjectType,
+			RecurSoft__Intacct_Entity__c.SObjectType,
 			Account.SObjectType,
 			Opportunity.SObjectType, 
 			OpportunityLineItem.SObjectType };
