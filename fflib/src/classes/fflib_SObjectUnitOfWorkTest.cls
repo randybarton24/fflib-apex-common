@@ -31,7 +31,8 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	private static List<Schema.SObjectType> MY_SOBJECTS = 
 		new Schema.SObjectType[] { 
 			Product2.SObjectType, 
-			PricebookEntry.SObjectType, 
+			PricebookEntry.SObjectType,
+			RecurSoft__Intacct_Entity_c.SObjectType,
 			Account.SObjectType,
 			Opportunity.SObjectType, 
 			OpportunityLineItem.SObjectType };
@@ -44,8 +45,10 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			fflib_SObjectUnitOfWork uow = new fflib_SObjectUnitOfWork(MY_SOBJECTS);
 			for(Integer o=0; o<10; o++)
 			{
+				RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+				uow.registerNew(new List<SObject>{entity});
 				Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
-				uow.registerNew(new List<SObject>{acct});
+				uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
 				Opportunity opp = new Opportunity();
 				opp.Name = 'UoW Test Name ' + o;
 				opp.StageName = 'Open';
@@ -211,8 +214,10 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
 		for(Integer o=0; o<10; o++)
 		{
+			RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+			uow.registerNew(new List<SObject>{entity});
 			Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
-			uow.registerNew(new List<SObject>{acct});
+			uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
 			Opportunity opp = new Opportunity();
 			opp.Name = 'UoW Test Name ' + o;
 			opp.StageName = 'Open';
@@ -280,8 +285,10 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork forcing a failure on DML by not setting 'Name' field
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
+		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+		uow.registerNew(new List<SObject>{entity});
 		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
-		uow.registerNew(new List<SObject>{acct});
+		uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
 		Opportunity opp = new Opportunity();
 		uow.registerNew(opp, Opportunity.AccountId, acct);
 		Boolean didFail = false;
@@ -320,8 +327,10 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
+		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+		uow.registerNew(new List<SObject>{entity});
 		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
-		uow.registerNew(new List<SObject>{acct});
+		uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
 		Opportunity opp = new Opportunity();
 		opp.Name = 'UoW Test Name 1';
 		opp.StageName = 'Open';
