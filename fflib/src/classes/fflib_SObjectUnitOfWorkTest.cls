@@ -214,7 +214,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
 		for(Integer o=0; o<10; o++)
 		{
-			RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+			RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR002');
 			uow.registerNew(new List<SObject>{entity});
 			Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
 			uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
@@ -285,7 +285,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork forcing a failure on DML by not setting 'Name' field
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
-		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR003');
 		uow.registerNew(new List<SObject>{entity});
 		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
 		uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
@@ -327,7 +327,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 	{
 		// Insert Opporunities with UnitOfWork
 		DerivedUnitOfWork uow = new DerivedUnitOfWork(MY_SOBJECTS);
-		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR001');
+		RecurSoft__Intacct_Entity__c entity = new RecurSoft__Intacct_Entity__c(Name = 'SR004');
 		uow.registerNew(new List<SObject>{entity});
 		Account acct = new Account(Name = 'Test Acct', Industry = 'Dental', RecurSoft__Payment_Term__c = 'Due Upon Receipt');
 		uow.registerNew(acct, Account.RecurSoft__Intacct_Entity__c, entity);
