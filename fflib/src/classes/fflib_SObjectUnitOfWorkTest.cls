@@ -58,7 +58,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 				{
 					Product2 product = new Product2();
 					product.Name = opp.Name + ' : Product : ' + i;
-					product.ProductCode = '300' + i;
+					product.ProductCode = '999' + i;
 					product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
 					product.RecurSoft__Billing_Automation__c = 'Auto';
 					product.RecurSoft__Billing_Frequency__c = 'Monthly';
@@ -106,7 +106,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			uow.registerDirty(new List<SObject>{opp});
 			Product2 product = new Product2();
 			product.Name = opp.Name + ' : New Product';
-			product.ProductCode = '4000';
+			product.ProductCode = '1234';
 			product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
 			product.RecurSoft__Billing_Automation__c = 'Auto';
 			product.RecurSoft__Billing_Frequency__c = 'Monthly';
@@ -227,7 +227,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			{
 				Product2 product = new Product2();
 				product.Name = opp.Name + ' : Product : ' + i;
-				product.ProductCode = '500' + i;
+				product.ProductCode = '888' + i;
 				product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
 				product.RecurSoft__Billing_Automation__c = 'Auto';
 				product.RecurSoft__Billing_Frequency__c = 'Monthly';
