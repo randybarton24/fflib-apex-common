@@ -106,7 +106,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			uow.registerDirty(new List<SObject>{opp});
 			Product2 product = new Product2();
 			product.Name = opp.Name + ' : New Product';
-			product.ProductCode = '400' + i;
+			product.ProductCode = '4000';
 			product.RecurSoft__Item_Type__c = 'Non-Inventory (Sales only)';
 			product.RecurSoft__Billing_Automation__c = 'Auto';
 			product.RecurSoft__Billing_Frequency__c = 'Monthly';
